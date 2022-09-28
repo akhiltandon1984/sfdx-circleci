@@ -46,7 +46,8 @@ jobs:
           command: |
             echo 'Running tests'
             echo assets/server.key
-            sfdx force:auth:jwt:grant --clientid $HUB_CONSUMER_KEY --jwtkeyfile server.key --username $HUB_SFDC_USER --setdefaultdevhubusername -a hub
+            #sfdx force:auth:jwt:grant --clientid $HUB_CONSUMER_KEY --jwtkeyfile server.key --username $HUB_SFDC_USER --setdefaultdevhubusername -a hub
+            sfdx force:auth:jwt:grant -h
             echo 'Login Sucessful'
             sfdx force --help
             sfdx force:org:create -s -f ~/ci_app/config/project-scratch-def.json -a circle_build_$CIRCLE_BUILD_NUM --wait 2
