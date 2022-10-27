@@ -60,8 +60,9 @@ jobs:
       - run:
           name: Run Apex Tests
           command: |
-            mkdir -p ~/junit
-            sfdx force:apex:test:run -c -d ~/junit -r junit --wait 5
+            sfdx force:source:deploy -x manifest/package.xml
+            #mkdir -p ~/junit
+            #sfdx force:apex:test:run -c -d ~/junit -r junit --wait 5
       - store_test_results:
           path: ~/junit
       - run:
