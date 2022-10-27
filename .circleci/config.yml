@@ -54,9 +54,9 @@ jobs:
             #sfdx force:auth:jwt:grant -h
             sfdx force:auth:jwt:grant --clientid 3MVG9riCAn8HHkYU18FXTHK8SH.ktHRglgXBgQmUHnmUAlkkebIOWLIFgrsQB7MWsEfqQ7HJFGHG6Hf8Pgvy0 --jwtkeyfile server.key --username akhiltandon1984@brave-narwhal-ongk8f.com --setdefaultdevhubusername -a hub
             echo 'Login Sucessful'
-            sfdx force --help
-            sfdx force:org:create -s -f ~/ci_app/config/project-scratch-def.json -a circle_build_$CIRCLE_BUILD_NUM --wait 2
-            sfdx force:source:push -u circle_build_$CIRCLE_BUILD_NUM
+            #sfdx force --help
+            #sfdx force:org:create -s -f ~/ci_app/config/project-scratch-def.json -a circle_build_$CIRCLE_BUILD_NUM --wait 2
+            #sfdx force:source:push -u circle_build_$CIRCLE_BUILD_NUM
       - run:
           name: Run Apex Tests
           command: |
