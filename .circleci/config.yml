@@ -52,7 +52,7 @@ jobs:
             echo assets/server.key
             #sfdx force:auth:jwt:grant --clientid $HUB_CONSUMER_KEY --jwtkeyfile server1.key --username $HUB_SFDC_USER --setdefaultdevhubusername -a hub
             #sfdx force:auth:jwt:grant -h
-            sfdx force:auth:jwt:grant --clientid 3MVG9riCAn8HHkYU18FXTHK8SH.ktHRglgXBgQmUHnmUAlkkebIOWLIFgrsQB7MWsEfqQ7HJFGHG6Hf8Pgvy0 --jwtkeyfile server.key --username akhiltandon1984@brave-narwhal-ongk8f.com --setdefaultdevhubusername -a hub
+            sfdx force:auth:jwt:grant --clientid 3MVG9riCAn8HHkYU18FXTHK8SH.ktHRglgXBgQmUHnmUAlkkebIOWLIFgrsQB7MWsEfqQ7HJFGHG6Hf8Pgvy0 --jwtkeyfile server.key --username akhiltandon1984@brave-narwhal-ongk8f.com --setdefaultdevhubusername -a hub -s
             echo 'Login Sucessful'
             #sfdx force --help
             #sfdx force:org:create -s -f ~/ci_app/config/project-scratch-def.json -a circle_build_$CIRCLE_BUILD_NUM --wait 2
@@ -64,11 +64,11 @@ jobs:
             #mkdir -p ~/junit
             #sfdx force:apex:test:run -c -d ~/junit -r junit --wait 5
       - store_test_results:
-          path: ~/junit
+          #path: ~/junit
       - run:
           name: Delete Useless Scratch Org
           command: |
-            sfdx force:org:delete -u circle_build_$CIRCLE_BUILD_NUM -p
+            #sfdx force:org:delete -u circle_build_$CIRCLE_BUILD_NUM -p
 
 ### Uncomment the following if performing deployments
 #deployment:
