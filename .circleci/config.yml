@@ -6,7 +6,7 @@ general:
 #     only:
 #       - dev # specific branch
 #       - /dev-.*/ # or regexes
-version: 2.0
+version: 2.1
 workflows:
   stage_test_approve_deploy:
     jobs:
