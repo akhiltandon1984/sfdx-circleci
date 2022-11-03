@@ -7,16 +7,7 @@ general:
 #       - dev # specific branch
 #       - /dev-.*/ # or regexes
 
-workflows:
-  stage_test_approve_deploy:
-    jobs:
-      
-      -takeapproval
-          type: approval
-          
-      - build
-          requires:
-            - takeapproval
+
 
 jobs:
   build:
@@ -87,3 +78,13 @@ jobs:
 #    - sfdx force:source:convert -r force-app -d testDeploy
 #    - . cleanupDeploy.sh
 #    - sfdx force:mdapi:deploy -d testDeploy/ -u deploy -w 2
+
+workflows:
+  stage_test_approve_deploy:
+    jobs:
+      -takeapproval
+          type: approval
+          
+      - build
+          requires:
+            - takeapproval
