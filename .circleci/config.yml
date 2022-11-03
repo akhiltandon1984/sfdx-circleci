@@ -7,6 +7,17 @@ general:
 #       - dev # specific branch
 #       - /dev-.*/ # or regexes
 
+workflows:
+  stage_test_approve_deploy:
+    jobs:
+      
+      -takeapproval
+          type: approval
+          
+      - build
+          requires:
+            - takeapproval
+
 jobs:
   build:
     machine: true
