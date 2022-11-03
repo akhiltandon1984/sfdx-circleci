@@ -84,7 +84,4 @@ workflows:
   stage_test_approve_deploy:
     jobs:
       - build
-      - takeapproval:
-          type : approval
-          requires:
-            - build
+      
