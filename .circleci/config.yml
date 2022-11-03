@@ -80,7 +80,9 @@ jobs:
 #    - sfdx force:source:convert -r force-app -d testDeploy
 #    - . cleanupDeploy.sh
 #    - sfdx force:mdapi:deploy -d testDeploy/ -u deploy -w 2
+
 workflows:
+  version: 2
   stage_test_approve_deploy:
     jobs:
       - build 
