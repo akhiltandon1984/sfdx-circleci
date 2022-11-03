@@ -1,4 +1,4 @@
-version: 2.2
+
 
 general:
 # Uncomment the following to specify only a specific branch
@@ -6,7 +6,7 @@ general:
 #     only:
 #       - dev # specific branch
 #       - /dev-.*/ # or regexes
-
+version: 2.2
 workflows:
   stage_test_approve_deploy:
     jobs:
