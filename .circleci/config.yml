@@ -6,7 +6,7 @@ jobs:
       - sfdx/install
       - sfdx/auth:
           defaultusername: akhiltandon1984@brave-narwhal-ongk8f.com
-          consumerKey: 3MVG9riCAn8HHkYU18FXTHK8SH.ktHRglgXBgQmUHnmUAlkkebIOWLIFgrsQB7MWsEfqQ7HJFGHG6Hf8Pgvy0
+          consumerKey: HUB_CONSUMER_KEY
           jwtKey: server.key
           
       - run:
