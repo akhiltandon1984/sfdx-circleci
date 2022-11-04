@@ -7,7 +7,7 @@ jobs:
       - sfdx/auth:
           defaultusername: akhiltandon1984@brave-narwhal-ongk8f.com
           consumerKey: HUB_CONSUMER_KEY
-          jwtKey: server.key
+          jwtKey: CERT_KEY
           
       - run:
           command: >
