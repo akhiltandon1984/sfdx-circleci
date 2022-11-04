@@ -6,6 +6,9 @@ jobs:
       - sfdx/install
       - sfdx/auth:
           defaultusername: akhiltandon1984@brave-narwhal-ongk8f.com
+          consumerKey: 3MVG9riCAn8HHkYU18FXTHK8SH.ktHRglgXBgQmUHnmUAlkkebIOWLIFgrsQB7MWsEfqQ7HJFGHG6Hf8Pgvy0
+          jwtKey: server.key
+          
       - run:
           command: >
             echo You now have access to the sfdx cli and may execute commands
