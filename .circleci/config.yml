@@ -15,10 +15,10 @@ jobs:
           name: Create hub key
           command: |
             #echo 'make hub key'
-            echo $CERT_KEY | base64 -di > assets/server.key 
-            #openssl enc -nosalt -aes-256-cbc -d -in $CERT_KEY -out assets/server1.key -base64 -K $DECRYPTION_KEY -iv $DECRYPTION_IV
+            #echo $CERT_KEY | base64 -di > assets/server.key 
+            openssl enc -nosalt -aes-256-cbc -d -in $ENC_KEY -out assets/server1.key -base64 -K $DECRYPTION_KEY -iv $DECRYPTION_IV
             #openssl enc -aes-256-cbc -d -in $CERT_KEY -out assets/server1.key -base64 -K $DECRYPTION_KEY -iv $DECRYPTION_IV
-            sfdx force:auth:jwt:grant --clientid $HUB_CONSUMER_KEY --jwtkeyfile assets/server.key --username $HUB_SFDX_USER -a deploy -s
+            #sfdx force:auth:jwt:grant --clientid $HUB_CONSUMER_KEY --jwtkeyfile assets/server.key --username $HUB_SFDX_USER -a deploy -s
       
       - run:
           command: >
