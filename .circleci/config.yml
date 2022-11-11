@@ -27,6 +27,7 @@ jobs:
             against it.
 
             #sfdx auth:list
+            
             sfdx force:source:deploy -x manifest/package.xml -u deploy -c -l RunLocalTests --resultsdir results  --coverageformatters text
           name: Run your SFDX commands here
 orbs:
