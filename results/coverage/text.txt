@@ -1,0 +1,19 @@
+-------------------------------------|---------|----------|---------|---------|------------------------------
+File                                 | % Stmts | % Branch | % Funcs | % Lines | Uncovered Line #s            
+-------------------------------------|---------|----------|---------|---------|------------------------------
+All files                            |   80.41 |      100 |     100 |   80.41 |                              
+ ChangePasswordController            |     100 |      100 |     100 |     100 |                              
+ CommunitiesLandingController        |     100 |      100 |     100 |     100 |                              
+ CommunitiesLoginController          |     100 |      100 |     100 |     100 |                              
+ CommunitiesSelfRegConfirmController |     100 |      100 |     100 |     100 |                              
+ CommunitiesSelfRegController        |   81.48 |      100 |     100 |   81.48 | 16,51-54,63-64,67-69         
+ ForgotPasswordController            |      90 |      100 |     100 |      90 | 15                           
+ LightningForgotPasswordController   |   66.66 |      100 |     100 |   66.66 | 15-16,24,26-28,30-32         
+ LightningLoginFormController        |   66.66 |      100 |     100 |   66.66 | 8-12,14-15,35,41-43,54,56-62 
+ LightningSelfRegisterController     |   80.37 |      100 |     100 |   80.37 | 21,51,87,93,111-134          
+ MicrobatchSelfRegController         |   83.33 |      100 |     100 |   83.33 | 10,40-43,51-53               
+ MyProfilePageController             |   88.88 |      100 |     100 |   88.88 | 21,37-38                     
+ SiteLoginController                 |     100 |      100 |     100 |     100 |                              
+ SiteRegisterController              |   84.37 |      100 |     100 |   84.37 | 39-40,43-45                  
+ myclass                             |     100 |      100 |     100 |     100 |                              
+-------------------------------------|---------|----------|---------|---------|------------------------------
