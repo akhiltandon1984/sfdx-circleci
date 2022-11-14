@@ -22,9 +22,8 @@ jobs:
             sfdx force:auth:jwt:grant --clientid $HUB_CONSUMER_KEY --jwtkeyfile assets/server.key --username $HUB_SFDX_USER -a deploy -s
       
       - run:
-          command: >
-            echo You now have access to the sfdx cli and may execute commands
-            against it.
+          command: |
+            
 
             #sfdx force:source:deploy -x manifest/package.xml -u deploy -c -l RunLocalTests --resultsdir results --coverageformatters text
             
@@ -32,9 +31,8 @@ jobs:
           
           name: Validate Deployment
        - run:
-          command: >
-            echo You now have access to the sfdx cli and may execute commands
-            against it.
+          command: |
+            
 
             
             sfdx force:source:deploy -x manifest/package.xml -u deploy -l RunSpecifiedTests -r mytest --resultsdir tests/apex/ --coverageformatters text
